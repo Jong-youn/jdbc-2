@@ -28,9 +28,12 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+	// MyBatis (Spring이 공식적으로 버전 관리 안하기 때문에 버전 정보 명시해야됨. 관리하면 스프링부트 버전에 맞는 최적화된 버전이 자동으로 셋팅됨)
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
-//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	// JPA, 스프링 데이터 JPA 추가 -> hibernate(JPA 구현체), persistence api(JPA) 추가
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// 'org.springframework.boot:spring-boot-starter-data-jpa' 에서 커버함
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 
 	//Querydsl 추가
 	implementation 'com.querydsl:querydsl-jpa'

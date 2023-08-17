@@ -19,6 +19,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * JdbcTemplate
+ */
 @Repository
 @Slf4j
 public class JdbcTemplateItemRepositoryV1 implements ItemRepository {
@@ -79,7 +82,7 @@ public class JdbcTemplateItemRepositoryV1 implements ItemRepository {
 
         // 동적 쿼리
         if (StringUtils.hasText(itemName) || maxPrice != null) {
-            sql += "where";
+            sql += " where";
         }
 
         boolean andFlag = false;
